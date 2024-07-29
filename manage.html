@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Management Dashboard</title>
+    <link rel="stylesheet" href="manage.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <script src="manage.js"></script>
+</head>
+
+<body>
+    <!-- container start -->
+    <div class="container">
+        <!-- right start -->
+        <div class="right">
+            <!-- top start -->
+            <div class="top">
+                <!-- searchBx start -->
+                <div class="searchBx">
+                    <h2>AgroIntel</h2>
+                    <div class="inputBx">
+                        <span class="material-symbols-outlined searchOpen">
+                            search
+                        </span>
+                        <input type="text" placeholder="Search...">
+                        <span class="material-symbols-outlined searchClose">
+                            close
+                        </span>
+                    </div>
+                </div>
+                <!-- searchBx end -->
+                <!-- user start -->
+                <div class="user">
+                    <span class="material-symbols-outlined">
+                        notifications
+                    </span>
+                    <div class="userImg">
+                        <img src="user.jpeg" alt="user">
+                    </div>
+                    <h2>Reza<br><span>Administrator</span></h2>
+                </div>
+                <!-- user end -->
+            </div>
+            <!-- top end -->
+            <!-- main start -->
+            <main>
+                <!-- projectCard start -->
+                <div class="projectCard">
+                    <!-- projectTop start -->
+                    <div class="projectTop">
+                        <h2>Farm Overview<br></h2>
+                        <div class="projectDots">
+                            <span class="material-symbols-outlined">
+                                more_horiz
+                            </span>
+                        </div>
+                    </div>
+                    <!-- projectTop end -->
+                    <!-- projectProgress start -->
+                    <div class="projectProgress">
+                        <div class="process">
+                            <h2>Farm Name: Green Valley Farms</h2>
+                            <h2>Location: Nairobi, Kenya</h2>
+                            <h2>Total Area: 50 hectares</h2>
+                            <h2>Type of Farming: Organic</h2>
+                            
+                        </div>
+                      
+                    </div>
+                    <!-- projectProgress end -->
+                    <!-- groupImg start -->
+                   
+                    <!-- task start -->
+                    <div class="task">
+                        <h2>Info Clarity <bold>4.5</bold> / 5</h2>
+                        <span class="line"></span>
+                    </div>
+                    <!-- task end -->
+                    <!-- due start -->
+                    <div class="due">
+                        <h2>Planting Period Due Date: 25 August</h2>
+                    </div>
+                    <!-- due end -->
+                </div>
+                <!-- projectCard end -->
+                <!-- projectCard2 start -->
+                <div class="projectCard projectCard2">
+                    <div class="projectTop">
+                        <h2>Soil Health<br></h2>
+                        <div class="projectDots" onclick="toggleDropdown()">
+                            <span class="material-symbols-outlined">
+                                more_horiz
+                            </span>
+                        </div>
+                    </div>
+                    <div class="projectProgress">
+                        <div class="process">
+                            <h2 id="soilTypeDisplay">Soil Type: Loamy</h2>
+                            <h2 id="phLevelDisplay">pH Level: 6.8</h2>
+                            <h2 id="nitrogenDisplay">Nitrogen: 20 ppm</h2>
+                            <h2 id="phosphorusDisplay">Phosphorus: 15 ppm</h2>
+                            <h2 id="potassiumDisplay">Potassium: 25 ppm</h2>
+                            <h2 id="calciumDisplay">Calcium: 20 ppm</h2>
+                        </div>
+                    </div>
+                   
+                    <div class="dropdown" id="dropdownMenu" style="display: none;">
+                        <label for="dataInput">Data:</label>
+                        <input type="text" id="dataInput" name="dataInput"><br><br>
+                        
+                        <label for="valueInput">Value:</label>
+                        <input type="text" id="valueInput" name="valueInput"><br><br>
+                        
+                        <button onclick="updateValues()">Update</button>
+                    </div>
+                   
+                    <div class="task">
+                        <h2>Reviewed to Date: <bold>6 / 6</bold> </h2>
+                        <span class="line"></span>
+                    </div>
+                    <div class="due">
+                        <h2>Last Checked-Date: 25 August</h2>
+                    </div>
+                </div>
+                <!-- projectCard2 end -->
+                <!-- myTasks start -->
+                <div class="myTasks">
+                    <!-- tasksHead start -->
+                    <div class="tasksHead">
+                        <h2>Climate and Weather</h2>
+                        <div class="tasksDots">
+                            <span class="material-symbols-outlined">
+                                more_horiz
+                            </span>
+                        </div>
+                    </div>
+                    <!-- tasksHead end -->
+                    <!-- tasks start -->
+                    <div class="tasks">
+                        <ul>
+                            <li>
+                                <span class="tasksIconName">
+                                    <span class="tasksIcon done">
+                                        <span class="material-symbols-outlined">
+                                            check
+                                        </span>
+                                    </span>
+                                    <span class="tasksName">
+                                        Current Weather: Sunny
+                                    </span>
+                                </span>
+                                <span class="tasksStar full">
+                                    <span class="material-symbols-outlined">
+                                        star
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="tasksIconName">
+                                    <span class="tasksIcon notDone"></span>
+                                    <span class="tasksName">
+                                        Average Temperature: 25°C
+                                    </span>
+                                </span>
+                                <span class="tasksStar half">
+                                    <span class="material-symbols-outlined">
+                                        star
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="tasksIconName">
+                                    <span class="tasksIcon notDone"></span>
+                                    <span class="tasksName">
+                                        Annual Rainfall: 1200 mm
+                                    </span>
+                                </span>
+                                <span class="tasksStar half">
+                                    <span class="material-symbols-outlined">
+                                        star
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="tasksIconName">
+                                    <span class="tasksIcon done">
+                                        <span class="material-symbols-outlined">
+                                            check
+                                        </span>
+                                    </span>
+                                    <span class="tasksName">
+                                        7-day Forecast: Mostly Sunny
+                                    </span>
+                                </span>
+                                <span class="tasksStar half">
+                                    <span class="material-symbols-outlined">
+                                        star
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="tasksIconName">
+                                    <span class="tasksIcon done">
+                                        <span class="material-symbols-outlined">
+                                            check
+                                        </span>
+                                    </span>
+                                    <span class="tasksName ">
+                                        Climate Zone: Tropical
+                                    </span>
+                                </span>
+                                <span class="tasksStar full">
+                                    <span class="material-symbols-outlined">
+                                        star
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="tasksIconName">
+                                    <span class="tasksIcon done"></span>
+                                    <span class="tasksName">
+                                        Wind Speed: 15 km/h
+                                    </span>
+                                </span>
+                                <span class="tasksStar half">
+                                    <span class="material-symbols-outlined">
+                                        star
+                                    </span>
+                                </span>
+                                <span class="tasksStar full">
+                                  
+                                </span>
+                            </li>
+                            <li>
+                                <span class="tasksIconName">
+                                    <span class="tasksIcon notDone"></span>
+                                    <span class="tasksName">
+                                        Humidity Level: 60%
+                                    </span>
+                                </span>
+                                <span class="tasksStar half">
+                                    <span class="material-symbols-outlined">
+                                        star
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- tasks ens -->
+                </div>
+                <!-- myTasks end -->
+                <!-- timeline start -->
+                <div class="timeline">
+                    <!-- timelineHead start -->
+                    <div class="timelineHead">
+                        <h2>Crop Mini-Management</h2>
+                        <div class="timelineDots">
+                            <span class="material-symbols-outlined">
+                                more_horiz
+                            </span>
+                        </div>
+                    </div>
+                    <!-- timelineHead end -->
+                    <!-- timelineVideos start -->
+                    <div class="timelineVideos">
+                        <ul>
+                            <li>
+                                <span class="videoText">
+                                    <span class="material-symbols-outlined full">
+                                        slideshow
+                                    </span>
+                                    <span class="text">
+                                        Current Crop:
+                                    </span>
+                                </span>
+                                <span class="timelineTime">
+                                    Maize
+                                </span>
+                            </li>
+                            <li>
+                                <span class="videoText">
+                                    <span class="material-symbols-outlined">
+                                        slideshow
+                                    </span>
+                                    <span class="text">
+                                        Planting Date:
+                                    </span>
+                                </span>
+                                <span class="timelineTime">
+                                    2024/03/15
+                                </span>
+                            </li>
+                            <li>
+                                <span class="videoText">
+                                    <span class="material-symbols-outlined">
+                                        slideshow
+                                    </span>
+                                    <span class="text">
+                                        Growth Stage :
+                                    </span>
+                                </span>
+                                <span class="timelineTime">
+                                    Flowering
+                                </span>
+                            </li>
+                            <li>
+                                <span class="videoText">
+                                    <span class="material-symbols-outlined">
+                                        slideshow
+                                    </span>
+                                    <span class="text">
+                                        Expected Yield:
+                                    </span>
+                                </span>
+                                <span class="timelineTime">
+                                    5tons
+                                </span>
+                            </li>
+                            <li>
+                                <span class="videoText">
+                                    <span class="material-symbols-outlined">
+                                        slideshow
+                                    </span>
+                                    <span class="text">
+                                        Pest/Disease Alerts:
+                                    </span>
+                                </span>
+                                <span class="timelineTime">
+                                    None
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- timelineVideos end -->
+                </div>
+                <!-- timeline end -->
+                <!-- calendar start -->
+                <div class="calendar">
+                    <!-- calendarHead start -->
+                    <div class="calendarHead">
+                        <h2>Reminder</h2>
+                    </div>
+                    <!-- calendarHead end -->
+                    <!-- calendarData start -->
+                 <ul>
+                   <li>Historical Yield Data: <br>2023: 4.5 tons<br>2022: 4.2 tons</li>
+                   <li>Production Trends: Increasing</li>
+                   <li>Yield Predictions: 5 tons</li>
+                   <li>Comparison with Regional Averages: Above average</li>
+                   <li>Graphical Representation: [Chart]</li>
+                   <li><p><strong>Reminder:</strong> Review soil nutrient levels and update fertilization plan before the next growth cycle.</p></li>
+                 </ul>
+                    <!-- calendarData end -->
+                </div>
+                <!-- calendar end -->
+                <!-- messages start -->
+                <div class="messages">
+                    <!-- messagesHead start -->
+                    <div class="messagesHead">
+                        <h2>AgroIntel-Recommendations</h2>
+                    </div>
+                    <!-- messagesHead end -->
+                   
+                <!-- messages end -->
+            </main>
+            <!-- main end -->
+        </div>
+        <!-- right end -->
+    </div>
+    <!-- container end -->
+</body>
+
+</html>
